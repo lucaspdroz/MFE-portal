@@ -8,6 +8,7 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   output: {
+    path: path.resolve(__dirname, "dist"),
     publicPath: process.env.NODE_ENV === 'production' ? process.env.PORTAL_URL : 'http://localhost:3000/',
   },
 
@@ -56,6 +57,14 @@ module.exports = (_, argv) => ({
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
+      },
     ],
   },
 
@@ -63,7 +72,9 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "portal",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        header: "header@https://mfe-header-two.vercel.app/remoteEntry.js",
+      },
       exposes: {},
       shared: {
         ...deps,
