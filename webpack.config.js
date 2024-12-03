@@ -74,8 +74,11 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {
         header: "header@https://mfe-header-two.vercel.app/remoteEntry.js",
+        portal: "portal@https://mfe-portal.vercel.app//remoteEntry.js",
       },
-      exposes: {},
+      exposes: {
+        './store': './src/store',
+      },
       shared: {
         ...deps,
         react: {
