@@ -38,7 +38,7 @@ jobs:
       - name: 'Create env file'
         run: |
           touch .env
-          echo  echo PROJECT_URL=https://lucaspdroz.github.io/MFE-header/ >> .env
+          echo  echo PROJECT_URL=https://lucaspdroz.github.io/MFE-portal/ >> .env
           cat .env
 
       - name: Install dependencies
