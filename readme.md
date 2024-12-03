@@ -13,7 +13,7 @@ Standard tho share this components trhu the web, and the `remoteEntry.js` is a m
 
 ## How does it work?
 
-![Archtecture](Archtecture.png)
+![Archtecture](https://raw.githubusercontent.com/lucaspdroz/MFE-portal/refs/heads/main/Archtecture.png)
 
 - Our Host Shares and consumes his own state
 - The Header MFE consumes the Host, but it can interact with it too.
