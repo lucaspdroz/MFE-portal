@@ -73,7 +73,7 @@ module.exports = (_, argv) => ({
       name: "portal",
       filename: "remoteEntry.js",
       remotes: {
-        header: "header@https://mfe-header-two.vercel.app/remoteEntry.js",
+        header: "header@https://lucaspdroz.github.io/MFE-header/remoteEntry.js",
       },
       exposes: {},
       shared: {
