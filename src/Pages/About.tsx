@@ -1,5 +1,5 @@
 import React from 'react'
-import ExternalHeader from '../Components/External/ExternalHeader'
+import ExternalHeader from '../components/External/ExternalHeader'
 
 export default function About() {
     return (

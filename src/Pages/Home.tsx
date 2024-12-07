@@ -1,5 +1,5 @@
 import React from 'react'
-import { PasswordChecker } from '../Components/PaaswordInput'
+import { PasswordChecker } from '../components/PaaswordInput'
 
 export default function Home() {
     return (
