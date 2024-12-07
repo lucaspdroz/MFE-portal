@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/sad.png'
+import img from '../Assets/sad.png'
 import './fallback.css'
 
 export default function ShowFallbackMessageError() {

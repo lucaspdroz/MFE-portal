@@ -1,37 +1,12 @@
-import React, { Suspense, lazy } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
-import SafeComponent from './Error/SafeComponent'
+import { AppRouter } from './router/routes'
+
 import './index.css'
 
-const Header = lazy(() => import('header/Header'))
-
-import useStore from 'portal/store'
-
 const App = () => {
-  const { count, increment } = useStore()
-
-  return (
-    <div className="posrtal" >
-      <Suspense fallback={<p>loading...</p>}>
-        <SafeComponent>
-          <Header />
-        </SafeComponent>
-      </Suspense>
-
-      <div>Name: portal</div>
-      <div>Framework: react</div>
-      <div>Language: TypeScript</div>
-      <div>CSS: Empty CSS</div>
-
-      <div>
-        {count} from store
-        <button onClick={increment}>increment</button>
-      </div>
-    </div>
-  )
-}
-
-
+  return <AppRouter />;
+};
 
 const rootElement = document.getElementById('app')
 if (!rootElement) throw new Error('Failed to find the root element')
